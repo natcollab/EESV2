@@ -1,0 +1,15 @@
+get_filename_component(EES_CMAKE_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
+
+if(NOT TARGET EES::Trader)
+  include("${EES_CMAKE_DIR}/EESTargets.cmake")
+endif()
+
+#=================================================================================
+# NOTE: the following code is not necessary, can be deleted in a target based system
+
+@PACKAGE_INIT@
+
+set_and_check(EES_INCLUDE_DIR "@PACKAGE_EES_INCLUDE_INSTALL_DIR@")
+set_and_check(EES_LIBRARIES_DIR "@PACKAGE_EES_LIB_INSTALL_DIR@")
+
+check_required_components(EES)
