@@ -1,7 +1,7 @@
-get_filename_component(EES_CMAKE_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
+get_filename_component(EESV2_CMAKE_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
 
-if(NOT TARGET EES::Trader)
-  include("${EES_CMAKE_DIR}/EESTargets.cmake")
+if(NOT TARGET EESV2::Trader)
+  include("${EESV2_CMAKE_DIR}/EESV2Targets.cmake")
 endif()
 
 #=================================================================================
@@ -9,7 +9,7 @@ endif()
 
 @PACKAGE_INIT@
 
-set_and_check(EES_INCLUDE_DIR "@PACKAGE_EES_INCLUDE_INSTALL_DIR@")
-set_and_check(EES_LIBRARIES_DIR "@PACKAGE_EES_LIB_INSTALL_DIR@")
+set_and_check(EESV2_INCLUDE_DIR "@PACKAGE_EESV2_INCLUDE_INSTALL_DIR@")
+set_and_check(EESV2_LIBRARIES_DIR "@PACKAGE_EESV2_LIB_INSTALL_DIR@")
 
-check_required_components(EES)
+check_required_components(EESV2)
