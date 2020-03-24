@@ -88,7 +88,6 @@ set_target_properties(EESV2.Trader PROPERTIES EXPORT_NAME Trader)
 install(TARGETS EESV2.Quote EXPORT EESV2_export)
 set_target_properties(EESV2.Quote PROPERTIES EXPORT_NAME Quote)
 
-# TODO: library path in export target file is relative path, which is not correct
 install(EXPORT EESV2_export
   NAMESPACE EESV2::
   FILE EESV2Targets.cmake
