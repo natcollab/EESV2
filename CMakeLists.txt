@@ -39,7 +39,7 @@ target_include_directories(EESV2.Trader
 
 target_link_libraries(EESV2.Trader
   INTERFACE  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/lib/libEESTraderApi.so>
-             $<INSTALL_INTERFACE:${EESV2_LIB_INSTALL_DIR}/libEESTraderApi.so>
+             $<INSTALL_INTERFACE:$<INSTALL_PREFIX>/${EESV2_LIB_INSTALL_DIR}/libEESTraderApi.so>
   )
 
 # Target: Quote
@@ -53,7 +53,7 @@ target_include_directories(EESV2.Quote
 
 target_link_libraries(EESV2.Quote
   INTERFACE  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/lib/libEESQuoteApi.so>
-             $<INSTALL_INTERFACE:${EESV2_LIB_INSTALL_DIR}/libEESQuoteApi.so>
+             $<INSTALL_INTERFACE:$<INSTALL_PREFIX>/${EESV2_LIB_INSTALL_DIR}/libEESQuoteApi.so>
   )
 
 #=================================================================================
